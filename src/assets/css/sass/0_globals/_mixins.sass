@@ -1,0 +1,26 @@
+//global mixins
+
+//map
+//
+// $breakpoints-up: ('sm': '34.375em')
+
+//
+// $breakpoints-down: ('': '')
+
+// @mixin breakpoint-up($size) //mobile to desktop
+//     @media (min-width: map-get($breakpoints-up, $size))
+//         @content
+
+// @mixin breakpoint-down($size) //desktop to mobile
+//     @media (max-width: map-get($breakpoints-down, $size))
+//         @content
+
+//reusable mixins
+@mixin trans($time) //transitions
+    transition: all $time ease-in-out
+
+@mixin max_width($width) //max width
+    max-width: $width
+
+@mixin min_width($width) //min width
+    min-width: $width

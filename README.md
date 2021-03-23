@@ -1,5 +1,10 @@
 # lasvegasintel
 
+This is my design for a travel agency company's website called Las Vegas Intel.
+Their link: https://lasvegasintel.com/
+
+I am not the owner of the information, photos, or company's property used in this design.
+
 ## Project setup
 ```
 npm install

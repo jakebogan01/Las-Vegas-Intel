@@ -1,0 +1,51 @@
+//global rules
+
+//html elements
+h1, h2, h3, p
+    margin: 0
+    padding: 0
+    
+a, a:visited, a:hover
+    text-decoration: none
+
+svg
+    display: block
+
+ul
+    list-style-type: none
+
+input
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    border-radius: $n20
+    padding: 0.515625rem 1rem
+    color: black
+    &:focus
+        color: black
+        box-shadow: none
+    &:invalid
+        box-shadow: none
+    
+textarea
+    font-family: Arial,Helvetica,sans-serif !important
+
+//helper classes
+.flex //flex values
+    display: flex
+    &_jc_sb
+        justify-content: space-between
+    &_jc_c
+        justify-content: center
+    &_ai_c
+        align-items: center
+    &_ai_fs
+        align-items: flex-start
+    &_dr_c
+        flex-direction: column
+    &_dr_cr
+        flex-direction: column-reverse
+    &_dr_r
+        flex-direction: row
+    &_dr_rr
+        flex-direction: row-reverse
