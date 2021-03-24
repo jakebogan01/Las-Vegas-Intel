@@ -1,19 +1,19 @@
 //global mixins
 
 //map
-//
-// $breakpoints-up: ('sm': '34.375em')
+//860px
+$breakpoints-up: ('mobile_menu': '53.75em')
 
-//
-// $breakpoints-down: ('': '')
+//859px
+$breakpoints-down: ('desktop_links': '53.6875em')
 
-// @mixin breakpoint-up($size) //mobile to desktop
-//     @media (min-width: map-get($breakpoints-up, $size))
-//         @content
+@mixin breakpoint-up($size) //mobile to desktop
+    @media (min-width: map-get($breakpoints-up, $size))
+        @content
 
-// @mixin breakpoint-down($size) //desktop to mobile
-//     @media (max-width: map-get($breakpoints-down, $size))
-//         @content
+@mixin breakpoint-down($size) //desktop to mobile
+    @media (max-width: map-get($breakpoints-down, $size))
+        @content
 
 //reusable mixins
 @mixin trans($time) //transitions

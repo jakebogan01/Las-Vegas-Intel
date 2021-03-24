@@ -1,0 +1,67 @@
+//navbar
+.header
+    // position: fixed
+    // top: 0
+    // left: 0
+    width: 100%
+    background-color: rgba(0,0,0,0.43)
+    // z-index: 100
+    
+    &_nav
+        @include max_width(1400px)
+        @include min_width($n300)
+        width: 100%
+        margin: 0 auto
+        padding: 0 10px
+        height: 85px
+    
+    &_logo
+
+    &_mobile_toggle
+        @include breakpoint-up(mobile_menu)
+            display: none
+        > span
+            display: block
+            transform: rotate(45deg)
+            border-radius: $n5
+            margin-bottom: $n3
+            background-color: white
+            @include trans(0.4s)
+            &:first-child
+                transform-origin: -$n9 $n10
+                width: $n13
+                height: $n3
+            &:nth-child(2)
+                transform-origin: $n10 $n3
+                width: $n26
+                height: $n3
+            &:last-child
+                transform-origin: $n20 $n15
+                width: $n6
+                height: $n3
+
+    &_open
+        > span:first-child
+            transform-origin: $n11_5 $n6
+            transform: rotate(136deg)
+            width: $n26
+        > span:nth-child(2)
+            transform-origin: $n10 $n3
+        > span:last-child
+            transform-origin: $n10 $n3
+            opacity: 0
+    
+    &_links
+        @include breakpoint-down(desktop_links)
+            display: none
+        li
+            height: 100%
+            a
+                display: inline-block
+                font-size: 17px
+                color: white
+                width: 100%
+                height: 100%
+                padding: 28px 15px
+                &:hover
+                    background-color: rgba(255,255,255,0.35)
