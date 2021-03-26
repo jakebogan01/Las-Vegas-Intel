@@ -1,0 +1,215 @@
+//navbar
+.header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    background-color: rgba(0,0,0,0.43)
+    z-index: 100
+    
+    &_nav
+        @include max_width(1400px)
+        @include min_width($n300)
+        width: 100%
+        margin: 0 auto
+        padding: 0 10px
+        height: 85px
+    
+    &_logo
+
+    &_mobile_toggle
+        @include breakpoint-up(mobile_menu)
+            display: none
+        > span
+            display: block
+            transform: rotate(45deg)
+            border-radius: $n5
+            margin-bottom: $n3
+            background-color: white
+            @include trans_normal(0.4s)
+            &:first-child
+                transform-origin: -$n9 $n10
+                width: $n13
+                height: $n3
+            &:nth-child(2)
+                transform-origin: $n10 $n3
+                width: $n26
+                height: $n3
+            &:last-child
+                transform-origin: $n20 $n15
+                width: $n6
+                height: $n3
+
+    &_mobile_menu
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        text-align: center
+        background-color: black
+        z-index: 100
+        animation: fade_in 0.4s cubic-bezier(.75,-0.5,0,1.75) forwards
+        .container
+            width: 100%
+            a
+                display: block
+                font-size: 20px
+                font-weight: 500
+                color: white
+                padding: 10px 0
+                opacity: 0
+                transform: translateY(-$n100)
+                transition: all 0.5s
+                &:nth-last-child(1)
+                    animation: fly_down 0.5s ease-in-out forwards
+                &:nth-last-child(2)
+                    animation: fly_down 0.5s ease-in-out forwards
+                    animation-delay: 0.1s
+                &:nth-last-child(3)
+                    animation: fly_down 0.5s ease-in-out forwards
+                    animation-delay: 0.2s
+                &:nth-last-child(4)
+                    animation: fly_down 0.5s ease-in-out forwards
+                    animation-delay: 0.3s
+                &:nth-last-child(5)
+                    animation: fly_down 0.5s ease-in-out forwards
+                    animation-delay: 0.4s
+                &:nth-last-child(6)
+                    animation: fly_down 0.5s ease-in-out forwards
+                    animation-delay: 0.5s
+                &:nth-last-child(7)
+                    animation: fly_down 0.5s ease-in-out forwards
+                    animation-delay: 0.6s
+                &:nth-last-child(8)
+                    animation: fly_down 0.5s ease-in-out forwards
+                    animation-delay: 0.7s
+                &:nth-last-child(9)
+                    animation: fly_down 0.5s ease-in-out forwards
+                    animation-delay: 0.8s
+                &:nth-last-child(10)
+                    animation: fly_down 0.5s ease-in-out forwards
+                    animation-delay: 0.9s
+                &:nth-last-child(11)
+                    animation: fly_down 0.5s ease-in-out forwards
+                    animation-delay: 1s
+                &:nth-last-child(12)
+                    animation: fly_down 0.5s ease-in-out forwards
+                    animation-delay: 1.1s
+                &:nth-last-child(13)
+                    animation: fly_down 0.5s ease-in-out forwards
+                    animation-delay: 1.2s
+                &:nth-last-child(14)
+                    animation: fly_down 0.5s ease-in-out forwards
+                    animation-delay: 1.3s
+                &:nth-last-child(15)
+                    animation: fly_down 0.5s ease-in-out forwards
+                    animation-delay: 1.4s
+                &:nth-last-child(16)
+                    animation: fly_down 0.5s ease-in-out forwards
+                    animation-delay: 1.5s
+                &:nth-last-child(17)
+                    animation: fly_down 0.5s ease-in-out forwards
+                    animation-delay: 1.6s
+                &:nth-last-child(18)
+                    animation: fly_down 0.5s ease-in-out forwards
+                    animation-delay: 1.7s
+                // &:not(:first-child)
+                    // margin-top: $n30
+                &:hover
+                    background-color: rgba(255,255,255,0.17)
+            .mobile_menu
+                position: absolute
+                left: 0
+                bottom: 0
+                right: 0
+                width: 100%
+                height: 100%
+                padding: 10px 0
+                z-index: 101
+                background-color: black
+                animation: fade_in 0.4s cubic-bezier(.75,-0.5,0,1.75) forwards
+                .container
+                    width: 100%
+                    overflow-y: auto
+
+    &_open
+        > span:first-child
+            transform-origin: $n11_5 $n6
+            transform: rotate(136deg)
+            width: $n26
+        > span:nth-child(2)
+            transform-origin: $n10 $n3
+        > span:last-child
+            transform-origin: $n10 $n3
+            opacity: 0
+    
+    &_links
+        @include breakpoint-down(desktop_links)
+            display: none
+        a
+            font-size: 17px
+            color: white
+            padding: 30px 15px
+            &:hover
+                background-color: rgba(255,255,255,0.35)
+        .sub1
+            position: relative
+            display: inline-block
+            &:hover .intel_menu
+                display: block
+            &:hover .sub_intel
+                background-color: rgba(255,255,255,0.35)
+            .intel_menu
+                position: absolute
+                top: 55px
+                display: none
+                width: 100vw
+                background-color: black
+                a
+                    display: block
+                    color: white
+                    font-size: 17px
+                    padding: 8px 16px
+                    &:hover
+                        background-color: rgba(255,255,255,0.17)
+        .sub2
+            position: relative
+            display: inline-block
+            &:hover .benefits_menu
+                display: block
+            &:hover .sub_benefits
+                background-color: rgba(255,255,255,0.35)
+            .benefits_menu
+                position: absolute
+                top: 55px
+                display: none
+                width: 100vw
+                background-color: black
+                a
+                    display: block
+                    color: white
+                    font-size: 17px
+                    padding: 8px 16px
+                    &:hover
+                        background-color: rgba(255,255,255,0.17)
+        .sub3
+            position: relative
+            display: inline-block
+            &:hover .more_menu
+                display: block
+            &:hover .sub_more
+                background-color: rgba(255,255,255,0.35)
+            .more_menu
+                position: absolute
+                top: 55px
+                display: none
+                width: 100vw
+                background-color: black
+                a
+                    display: block
+                    color: white
+                    font-size: 17px
+                    padding: 8px 16px
+                    &:hover
+                        background-color: rgba(255,255,255,0.17)

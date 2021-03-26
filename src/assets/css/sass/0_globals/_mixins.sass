@@ -17,6 +17,8 @@ $breakpoints-down: ('desktop_links': '53.6875em')
 
 //reusable mixins
 @mixin trans($time) //transitions
+    transition: all $time cubic-bezier(.75,-0.5,0,1.75)
+@mixin trans_normal($time) //transitions
     transition: all $time ease-in-out
 
 @mixin max_width($width) //max width
