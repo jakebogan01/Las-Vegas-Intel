@@ -1,0 +1,31 @@
+//footer
+.footer
+    background-color: black
+    color: white
+    text-align: center
+
+    &_links
+        padding: 34px 10px 23px 10px
+        @include max_width(1400px)
+        @include min_width($n300)
+        margin: 0 auto
+        @include breakpoint-up(mobile_menu)
+            flex-direction: row
+            justify-content: space-between
+            align-items: flex-start
+            text-align: left
+        h5
+            font-weight: 500
+            font-size: 15px
+        ul li a
+            color: #B9B9B9
+            font-size: 12px
+        .links
+            &:not(:last-child)
+                margin-bottom: 24px
+
+    &_copyright
+        padding-bottom: 14px 
+        span
+            font-size: 8px
+            color: #777777

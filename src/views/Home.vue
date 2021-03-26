@@ -1,5 +1,5 @@
 <template>
-    <Nav />
+    <Nav :login="login"/>
 <!--
 hero***
 -->
@@ -46,21 +46,50 @@ hero search***
                         <input type="text" placeholder="Zip Code">
                         <button><div class="background"></div><i class="fas fa-globe-americas"></i></button>
                     </div>
-                    <button class="search_btn">Search<div class="background"></div></button>
+                    <button class="search_btn">Search</button>
                 </form>
             </div>
         </div>
+<!--
+home info***
+-->
+        <main class="home_info flex flex_dr_c flex_ai_c flex_jc_c">
+            <div class="home_info_left">
+                <h3>Join For The Free Giveaways!<br>Stay For The Benefits & Impact The World</h3>
+                <p>You will love our extraordinary giveaways! Every member receives a FREE Travel Award every year for complimentary luxury resort accommodations. Exclusive member benefits include travel, hospitality, dining, entertainment and retail discounts. Enjoy the world's best VIP programs. Discover great travel stories, rewards, offers, events and all the intel. Share your unique travel experiences. Stories are shared throughout our media and digital magazines. Help us impact Very Inspiring People's global causes. Sponsors support Giving Empire. Let's build the world's largest Giving Empire!</p>
+            </div>
+            <div class="home_info_right">
+                <h3>Share Unique Stories & Brand Stories.<br>Make a Global Impact</h3>
+                <p>The World's Travel Club and The Travel Intel is the ultimate travel online community. We connect consumers, influencers, brands, travel industry professionals and media on a global scope. Our publicity reach includes valuable incentives, compelling magazines, digital series shows, videos and global ad campaigns. Share your Brand Story and expand your digital footprint. We encourage others to discover new experiences and share their incredible stories. We invite all creators to share their unique stories through articles and media. Take advantage of World's Business Club and World's Marketing Club. Use the giveaways to grow your business and charity relations. Your support sponsors Generous Empire and our mission to give millions of dollars to worthy causes. This mutually beneficial relationship is a WIN, WIN, WIN!</p>
+            </div>
+        </main>
+        <Footer />
     </section>
 </template>
 
 <script>
     import Nav from "@/components/Nav"
+    import Footer from "@/components/Footer"
+    import { ref } from 'vue'
 
     export default {
         name: 'Home',
-        components:{Nav},
-        setup(){
-            console.log('%c Hey guys, like what you see?', 'font-weight: bold; font-size: 50px;color: red; text-shadow: 3px 3px 0 rgb(217,31,38) , 6px 6px 0 rgb(226,91,14) , 9px 9px 0 rgb(245,221,8) , 12px 12px 0 rgb(5,148,68) , 15px 15px 0 rgb(2,135,206) , 18px 18px 0 rgb(4,77,145) , 21px 21px 0 rgb(42,21,113)');
+        components:{Nav,Footer},
+        setup(props,context){
+
+            const login = ref(false)
+
+            document.body.addEventListener('scroll', function (ev) {
+                if(document.body.scrollTop >= 80){
+                    //scrolls down
+                    login.value = false
+                }else if(document.body.scrollTop <= 80){
+                    //scrolls up
+                    login.value = true
+                }
+            }, true)
+
+            return{login}
         }
     }
 </script>

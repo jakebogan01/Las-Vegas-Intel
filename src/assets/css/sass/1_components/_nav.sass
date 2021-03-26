@@ -4,8 +4,9 @@
     top: 0
     left: 0
     width: 100%
-    background-color: rgba(0,0,0,0.43)
+    background-color: rgba(0,0,0,0.30)
     z-index: 100
+    @include trans_normal(0.3s)
     
     &_nav
         @include max_width(1400px)
@@ -14,6 +15,7 @@
         margin: 0 auto
         padding: 0 10px
         height: 85px
+        @include trans_normal(0.3s)
     
     &_logo
 
@@ -41,7 +43,7 @@
                 height: $n3
 
     &_mobile_menu
-        position: absolute
+        position: fixed
         top: 0
         left: 0
         width: 100%
@@ -213,3 +215,15 @@
                     padding: 8px 16px
                     &:hover
                         background-color: rgba(255,255,255,0.17)
+
+.no_background
+    background-color: transparent
+
+.black_background
+    background-color: black
+
+.small_nav
+    height: 50px
+
+.big_nav
+    height: 85px

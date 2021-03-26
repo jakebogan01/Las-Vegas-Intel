@@ -2,8 +2,8 @@
 <!--
 header***
 -->
-    <header class="header">
-        <nav class="header_nav flex flex_jc_sb flex_ai_c">
+    <header class="header" :class="login ? 'no_background' : 'black_background'">
+        <nav class="header_nav flex flex_jc_sb flex_ai_c" :class="login ? 'big_nav' : 'small_nav'">
 <!--
 logo***
 -->
@@ -22,7 +22,9 @@ mobile menu icon***
 nav links***
 -->
             <div class="header_links">
-                <a href="#">Home</a>
+                <router-link :to="{name:'Home'}">
+                    Home
+                </router-link>
                 <div class="sub1">
                     <a class="sub_intel" href="#">Intel</a>
 <!--
@@ -80,7 +82,9 @@ more sub menu***
                 </div>
                 <a href="#">Rewards</a>
                 <a href="#">Contact</a>
-                <a href="#">Login</a>
+                <router-link :to="{name:'Login'}">
+                    Login
+                </router-link>
             </div>
         </nav>
     </header>
@@ -89,7 +93,9 @@ mobile menu***
 -->
     <div class="header_mobile_menu flex flex_dr_c flex_ai_c flex_jc_c" v-if="toggled_mobile_menu">
         <div class="container">
-            <a href="#">Home</a>
+            <router-link :to="{name:'Home'}">
+                Home
+            </router-link>
             <a @click="intel" href="#">Intel</a>
 <!--
 intel mobile sub menu***
@@ -150,7 +156,9 @@ more mobile sub menu***
             </div>
             <a href="#">Rewards</a>
             <a href="#">Contact</a>
-            <a href="#">Login</a>
+            <router-link :to="{name:'Login'}">
+                Login
+            </router-link>
             <a @click="close" href="#"><i class="fas fa-times"></i> Exit</a>
         </div>
     </div>
@@ -160,7 +168,8 @@ more mobile sub menu***
     import { ref } from 'vue'
 
     export default {
-        setup(){
+        props: ['login'],
+        setup(props,context){
             
             const toggled_mobile_menu = ref(false)
             const mobileToggle = ref(null)
