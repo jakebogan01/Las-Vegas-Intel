@@ -4,9 +4,14 @@
     top: 0
     left: 0
     width: 100%
-    background-color: rgba(0,0,0,0.30)
     z-index: 100
     @include trans_normal(0.3s)
+    .shader
+        position: absolute
+        width: 100%
+        height: 100%
+        background-color: rgba(0,0,0,0.30)
+        z-index: -1
     
     &_nav
         @include max_width(1400px)
@@ -227,3 +232,14 @@
 
 .big_nav
     height: 85px
+
+.small_padding
+    padding: 13px 15px !important
+
+.big_padding
+    padding: 30px 15px
+
+.top
+    top: 55px
+.bottom
+    top: 40px !important

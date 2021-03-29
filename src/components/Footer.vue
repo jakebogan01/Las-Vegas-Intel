@@ -17,7 +17,7 @@
             <div class="three links">
                 <h5>Support</h5>
                 <ul>
-                    <li><a href="#">Password Retrieval</a></li>
+                    <li><router-link :to="{name:'Login',params:{msg}}">Password Retrieval</router-link></li>
                     <li><a href="#">Contact Us</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                     <li><a href="#">Terms Of Use</a></li>
@@ -31,7 +31,11 @@
 </template>
 
 <script>
-export default {
-
-}
+    export default {
+        data () {
+            return {
+                msg: 'hello'
+            }
+        }
+    }
 </script>

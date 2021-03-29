@@ -130,9 +130,16 @@ input[type=submit] {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
   z-index: 100;
   transition: all 0.3s ease-in-out;
+}
+
+.header .shader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: -1;
 }
 
 .header_nav {
@@ -459,6 +466,22 @@ input[type=submit] {
   height: 85px;
 }
 
+.small_padding {
+  padding: 13px 15px !important;
+}
+
+.big_padding {
+  padding: 30px 15px;
+}
+
+.top {
+  top: 55px;
+}
+
+.bottom {
+  top: 40px !important;
+}
+
 .footer {
   background-color: black;
   color: white;
@@ -762,7 +785,7 @@ input[type=submit] {
   background-position: center bottom;
   background-size: cover;
   height: 100%;
-  padding: 0 10px;
+  padding: 400px 10px;
   text-align: center;
 }
 
@@ -806,6 +829,61 @@ input[type=submit] {
 }
 
 .login_signup button {
+  border-radius: 25px;
+  padding: 0 23px;
+  margin-bottom: 25px;
+}
+
+.contact {
+  background-image: url("../images/jpg/city_1.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  height: 100%;
+  padding: 400px 10px;
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 21px;
+}
+
+.contact p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.contact p:not(:last-child) {
+  margin-bottom: 41px;
+}
+
+.contact p:last-child {
+  font-size: 13px;
+}
+
+.contact p .info {
+  color: #4168EF;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.contact_signup {
+  max-width: 569px;
+  width: 100%;
+  height: 508px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  padding: 51px 35px;
+}
+
+.contact_signup input {
+  width: 100%;
+  border-radius: 25px;
+  margin-bottom: 25px;
+}
+
+.contact_signup button {
   border-radius: 25px;
   padding: 0 23px;
   margin-bottom: 25px;

@@ -3,6 +3,7 @@
 header***
 -->
     <header class="header" :class="login ? 'no_background' : 'black_background'">
+        <div class="shader" v-show="home"></div>
         <nav class="header_nav flex flex_jc_sb flex_ai_c" :class="login ? 'big_nav' : 'small_nav'">
 <!--
 logo***
@@ -22,15 +23,15 @@ mobile menu icon***
 nav links***
 -->
             <div class="header_links">
-                <router-link :to="{name:'Home'}">
+                <router-link :class="login ? 'big_padding' : 'small_padding'" :to="{name:'Home'}">
                     Home
                 </router-link>
                 <div class="sub1">
-                    <a class="sub_intel" href="#">Intel</a>
+                    <a class="sub_intel" :class="login ? 'big_padding' : 'small_padding'" href="#">Intel</a>
 <!--
 intel sub menu***
 -->
-                    <div class="intel_menu">
+                    <div class="intel_menu" :class="login ? 'top' : 'bottom'">
                         <a href="#">Foodie Intel</a>
                         <a href="#">Recommendations | Reviews</a>
                         <a href="#">Travel Intel</a>
@@ -44,11 +45,11 @@ intel sub menu***
                     </div>
                 </div>
                 <div class="sub2">
-                    <a class="sub_benefits" href="#">Benefits</a>
+                    <a class="sub_benefits" :class="login ? 'big_padding' : 'small_padding'" href="#">Benefits</a>
 <!--
 benefits sub menu***
 -->
-                    <div class="benefits_menu">
+                    <div class="benefits_menu" :class="login ? 'top' : 'bottom'">
                         <a href="#">Complimentary Vacation Destinations</a>
                         <a href="#">Manage Your Complimentary Vacation</a>
                         <a href="#">Complimentary Vacation Terms &#38; Conditions</a>
@@ -56,11 +57,11 @@ benefits sub menu***
                     </div>
                 </div>
                 <div class="sub3">
-                    <a class="sub_more" href="#">More</a>
+                    <a class="sub_more" :class="login ? 'big_padding' : 'small_padding'" href="#">More</a>
 <!--
 more sub menu***
 -->
-                    <div class="more_menu">
+                    <div class="more_menu" :class="login ? 'top' : 'bottom'">
                         <a href="#">Member Plans &#38; Pricing</a>
                         <a href="#">Member Profiles</a>
                         <a href="#">Travel Intel Magazine</a>
@@ -80,9 +81,11 @@ more sub menu***
                         <a href="#">Audio</a>
                     </div>
                 </div>
-                <a href="#">Rewards</a>
-                <a href="#">Contact</a>
-                <router-link :to="{name:'Login'}">
+                <a href="#" :class="login ? 'big_padding' : 'small_padding'">Rewards</a>
+                <router-link :class="login ? 'big_padding' : 'small_padding'" :to="{name:'Contact'}">
+                    Contact
+                </router-link>
+                <router-link :class="login ? 'big_padding' : 'small_padding'" :to="{name:'Login'}">
                     Login
                 </router-link>
             </div>
@@ -155,7 +158,9 @@ more mobile sub menu***
                 </div>
             </div>
             <a href="#">Rewards</a>
-            <a href="#">Contact</a>
+            <router-link :to="{name:'Contact'}">
+                Contact
+            </router-link>
             <router-link :to="{name:'Login'}">
                 Login
             </router-link>
@@ -168,7 +173,7 @@ more mobile sub menu***
     import { ref } from 'vue'
 
     export default {
-        props: ['login'],
+        props: ['login','home'],
         setup(props,context){
             
             const toggled_mobile_menu = ref(false)

@@ -1,5 +1,5 @@
 <template>
-    <Nav :login="login"/>
+    <Nav :login="login" :home="home"/>
 <!--
 hero***
 -->
@@ -76,20 +76,23 @@ home info***
         name: 'Home',
         components:{Nav,Footer},
         setup(props,context){
+            
+            document.body.scrollTop
 
-            const login = ref(false)
+            const login = ref(true)
+            const home = ref(true)
 
             document.body.addEventListener('scroll', function (ev) {
-                if(document.body.scrollTop >= 80){
+                if(document.body.scrollTop >= 10){
                     //scrolls down
                     login.value = false
-                }else if(document.body.scrollTop <= 80){
+                }else if(document.body.scrollTop <= 10){
                     //scrolls up
                     login.value = true
                 }
             }, true)
 
-            return{login}
+            return{login, home}
         }
     }
 </script>

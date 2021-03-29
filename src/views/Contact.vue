@@ -1,6 +1,6 @@
 <template>
-    <Nav :login="login" />
-    <section class="login flex flex_ai_c flex_jc_c">
+    <Nav />
+    <section class="contact flex flex_ai_c flex_jc_c">
         <div class="login_signup" v-if="page">
             <h2>Sign Up</h2>
             <p>Sign up with an account, and travel the world!</p>
@@ -38,45 +38,12 @@
 <script>
     import Nav from "@/components/Nav"
     import Footer from "@/components/Footer"
-    import { onMounted, ref } from 'vue'
 
     export default {
-        name: 'Login',
-        props: ['msg'],
+        name: 'Contact',
         components: {Nav,Footer},
-        setup(props,context){
+        setup(){
             
-            const login = ref(true)
-            const page = ref(null)
-            const msg = ref(false)
-
-            const a = onMounted(()=>{
-                // console.log(props.msg == 'hello')
-                if(props.msg === undefined){
-                    page.value = false
-                }else if(props.msg == 'hello'){
-                    msg.value = true
-                }
-            })
-
-            document.body.scrollTop
-
-            document.body.addEventListener('scroll', function (ev) {
-                if(document.body.scrollTop >= 10){
-                    //scrolls down
-                    login.value = false
-                }else if(document.body.scrollTop <= 10){
-                    //scrolls up
-                    login.value = true
-                }
-            }, true)
-
-            const switchPage = ()=>{
-                page.value = !page.value
-                msg.value = false
-            }
-
-            return{login,page,switchPage,msg}
         }
     }
 </script>
