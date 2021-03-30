@@ -3,7 +3,10 @@
 header***
 -->
     <header class="header" :class="login ? 'no_background' : 'black_background'">
-        <div class="shader" v-show="home"></div>
+<!--
+shader***
+-->
+        <div class="shader" v-show="home" v-if="showVideo"></div>
         <nav class="header_nav flex flex_jc_sb flex_ai_c" :class="login ? 'big_nav' : 'small_nav'">
 <!--
 logo***
@@ -50,7 +53,7 @@ intel sub menu***
 benefits sub menu***
 -->
                     <div class="benefits_menu" :class="login ? 'top' : 'bottom'">
-                        <a href="#">Complimentary Vacation Destinations</a>
+                        <router-link :to="{name:'Destinations'}">Complimentary Vacation Destinations</router-link>
                         <a href="#">Manage Your Complimentary Vacation</a>
                         <a href="#">Complimentary Vacation Terms &#38; Conditions</a>
                         <a href="#">Dining Club | Dining Advantage Offers</a>
@@ -125,7 +128,7 @@ benefits mobile sub menu***
             <div class="mobile_menu flex flex_dr_c flex_ai_c flex_jc_c" v-if="sub_benefits">
                 <div class="container">
                     <a @click="exit" href="#"><i class="fas fa-caret-left"></i> Back</a>
-                    <a href="#">Complimentary Vacation Destinations</a>
+                    <router-link :to="{name:'Destinations'}">Complimentary Vacation Destinations</router-link>
                     <a href="#">Manage Your Complimentary Vacation</a>
                     <a href="#">Complimentary Vacation Terms &#38; Conditions</a>
                     <a href="#">Dining Club | Dining Advantage Offers</a>
@@ -173,7 +176,7 @@ more mobile sub menu***
     import { ref } from 'vue'
 
     export default {
-        props: ['login','home'],
+        props: ['login','home','showVideo'],
         setup(props,context){
             
             const toggled_mobile_menu = ref(false)

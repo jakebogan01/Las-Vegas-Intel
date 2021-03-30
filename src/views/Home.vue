@@ -1,5 +1,5 @@
 <template>
-    <Nav :login="login" :home="home"/>
+    <Nav :showVideo="showVideo" :login="login" :home="home"/>
 <!--
 hero***
 -->
@@ -8,7 +8,7 @@ hero***
 hero video***
 -->
         <div class="hero_video flex flex_ai_c flex_jc_c">
-            <video autoplay loop muted playsinline>
+            <video autoplay loop muted playsinline v-if="showVideo">
                 <source src="@/assets/videos/mp4/las_vegas_video.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
@@ -70,7 +70,7 @@ home info***
 <script>
     import Nav from "@/components/Nav"
     import Footer from "@/components/Footer"
-    import { ref } from 'vue'
+    import { onMounted, onUnmounted, ref } from 'vue'
 
     export default {
         name: 'Home',
@@ -79,6 +79,7 @@ home info***
             
             document.body.scrollTop
 
+            const showVideo = ref(true)
             const login = ref(true)
             const home = ref(true)
 
@@ -92,7 +93,24 @@ home info***
                 }
             }, true)
 
-            return{login, home}
+            const a = onMounted(()=>{
+                window.addEventListener('resize', handleResize);
+                handleResize();
+            })
+
+            const b = onUnmounted(()=>{
+                window.removeEventListener('resize', handleResize)
+            })
+
+            const handleResize = ()=>{
+                if(window.innerWidth <= 859){
+                    showVideo.value = false
+                }else{
+                    showVideo.value = true
+                }
+            }
+
+            return{login, home, handleResize, a, b, showVideo}
         }
     }
 </script>

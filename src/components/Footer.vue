@@ -18,9 +18,9 @@
                 <h5>Support</h5>
                 <ul>
                     <li><router-link :to="{name:'Login',params:{msg}}">Password Retrieval</router-link></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms Of Use</a></li>
+                    <li><router-link :to="{name:'Contact'}">Contact Us</router-link></li>
+                    <li><router-link :to="{name:'Privacy'}">Privacy Policy</router-link></li>
+                    <li><router-link :to="{name:'Terms'}">Terms Of Use</router-link></li>
                 </ul>
             </div>
         </div>
