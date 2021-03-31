@@ -1,8 +1,59 @@
 //destinations
 .destinations
+    position: relative
     padding: 0 10px
     margin: 219px 0 131px 0
-    #accordion
+    background-color: white
+    #background
+        position: absolute
+        top: 0
+        right: 0
+        z-index: 0
+    .accordion
+        position: relative
         @include max_width(1400px)
         @include min_width($n300)
+        width: 100%
         margin: 0 auto
+        z-index: 1
+        h2
+            text-align: center
+            margin-bottom: 81px
+            @include trans_normal(0.3s)
+            @include breakpoint-up(mobile_menu)
+                font-size: 30px
+        .vcpg
+            box-shadow: none
+            border: none
+            .vcp__body
+                height: auto !important
+                border: none
+            .vcp__header
+                background-color: transparent
+                .vcp__header-title
+                    font-size: 14px
+                    font-weight: 500
+                    @include trans_normal(0.3s)
+                    @include breakpoint-up(mobile_menu)
+                        font-size: 20px
+            .vcp__body-content
+                display: grid
+                grid-template-columns: 1fr
+                grid-column-gap: 1.25rem
+                grid-row-gap: 1.25rem
+                width: 100%
+                transition: all 4s ease
+                @include breakpoint-up(login)
+                    grid-template-columns: repeat(2, 1fr)
+                @include breakpoint-up(mobile_menu)
+                    grid-template-columns: repeat(4, 1fr)
+                .vaca
+                    text-align: center
+                    height: 200px
+                    overflow: hidden
+                    h3
+                        font-size: 17px
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
