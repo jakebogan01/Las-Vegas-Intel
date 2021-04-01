@@ -37,14 +37,14 @@ intel sub menu***
                     <div class="intel_menu" :class="login ? 'top' : 'bottom'">
                         <a href="#">Foodie Intel</a>
                         <a href="#">Recommendations | Reviews</a>
-                        <a href="#">Travel Intel</a>
-                        <a href="#">Destination Intel</a>
-                        <a href="#">Entertainment &#38; Music Intel</a>
-                        <a href="#">Generous Intel | Generous Empire</a>
-                        <a href="#">Cruise Intel</a>
-                        <a href="#">Casinos Intel</a>
-                        <a href="#">World's Intel | Business | Lifestyle | VIP</a>
-                        <a href="#">World's Business Intel</a>
+                        <a href="https://thetravelintel.com/">Travel Intel</a>
+                        <a href="https://destinationintel.com/">Destination Intel</a>
+                        <a href="https://theentertainmentintel.com/">Entertainment &#38; Music Intel</a>
+                        <a href="https://generousintel.com/">Generous Intel | Generous Empire</a>
+                        <a href="https://cruiseintel.com/">Cruise Intel</a>
+                        <a href="http://casinosintel.com/">Casinos Intel</a>
+                        <a href="https://worldsintel.com/">World's Intel | Business | Lifestyle | VIP</a>
+                        <a href="https://worldsintel.com/">World's Business Intel</a>
                     </div>
                 </div>
                 <div class="sub2">
@@ -54,9 +54,9 @@ benefits sub menu***
 -->
                     <div class="benefits_menu" :class="login ? 'top' : 'bottom'">
                         <router-link :to="{name:'Destinations'}">Complimentary Vacation Destinations</router-link>
-                        <a href="#">Manage Your Complimentary Vacation</a>
-                        <a href="#">Complimentary Vacation Terms &#38; Conditions</a>
-                        <a href="#">Dining Club | Dining Advantage Offers</a>
+                        <a href="https://redeemvacations.com/">Manage Your Complimentary Vacation</a>
+                        <a href="https://redeemvacations.com/terms-and-conditions">Complimentary Vacation Terms &#38; Conditions</a>
+                        <a href="https://www.diningadvantage.com/">Dining Club | Dining Advantage Offers</a>
                     </div>
                 </div>
                 <div class="sub3">
@@ -67,18 +67,18 @@ more sub menu***
                     <div class="more_menu" :class="login ? 'top' : 'bottom'">
                         <a href="#">Member Plans &#38; Pricing</a>
                         <a href="#">Member Profiles</a>
-                        <a href="#">Travel Intel Magazine</a>
-                        <a href="#">Suncoast Magazine</a>
+                        <a href="https://issuu.com/thevipmedia/docs/travel_intel_1">Travel Intel Magazine</a>
+                        <a href="https://issuu.com/thevipmedia/docs/suncoast_magazine_fall.19">Suncoast Magazine</a>
                         <a href="#">Stories</a>
-                        <a href="#">World's Travel Agency</a>
+                        <a href="https://worldstravelagency.com/">World's Travel Agency</a>
                         <a href="#">Offers</a>
                         <a href="#">Giveaways</a>
                         <a href="#">Events</a>
                         <a href="#">Event Calendar</a>
-                        <a href="#">Founders Card Membership</a>
-                        <a href="#">Generous Vacations Printable Certificates</a>
-                        <a href="#">Foodie Intel Media Kit</a>
-                        <a href="#">Foodie Intel Media Kit Magazine</a>
+                        <a href="https://founderscard.com/inquire?code=FCTRACY413">Founders Card Membership</a>
+                        <a href="https://issuu.com/signin?onLogin=%2Fhome%2Fpublished%2Fprintable_certificates">Generous Vacations Printable Certificates</a>
+                        <a href="https://foodieintel.com/images/Foodie-Intel-Media-Kit.pdf">Foodie Intel Media Kit</a>
+                        <a href="https://issuu.com/thevipmedia/docs/foodie_intel_media_kit_40988768746d08">Foodie Intel Media Kit Magazine</a>
                         <a href="#">Videos</a>
                         <a href="#">Photos</a>
                         <a href="#">Audio</a>
@@ -111,14 +111,14 @@ intel mobile sub menu***
                     <a @click="exit" href="#"><i class="fas fa-caret-left"></i> Back</a>
                     <a href="#">Foodie Intel</a>
                     <a href="#">Recommendations | Reviews</a>
-                    <a href="#">Travel Intel</a>
-                    <a href="#">Destination Intel</a>
-                    <a href="#">Entertainment &#38; Music Intel</a>
-                    <a href="#">Generous Intel | Generous Empire</a>
-                    <a href="#">Cruise Intel</a>
-                    <a href="#">Casinos Intel</a>
-                    <a href="#">World's Intel | Business | Lifestyle | VIP</a>
-                    <a href="#">World's Business Intel</a>
+                    <a href="https://thetravelintel.com/">Travel Intel</a>
+                    <a href="https://destinationintel.com/">Destination Intel</a>
+                    <a href="https://theentertainmentintel.com/">Entertainment &#38; Music Intel</a>
+                    <a href="https://generousintel.com/">Generous Intel | Generous Empire</a>
+                    <a href="https://cruiseintel.com/">Cruise Intel</a>
+                    <a href="http://casinosintel.com/">Casinos Intel</a>
+                    <a href="https://worldsintel.com/">World's Intel | Business | Lifestyle | VIP</a>
+                    <a href="https://worldsintel.com/">World's Business Intel</a>
                 </div>
             </div>
             <a @click="benefits" href="#">Benefits</a>
@@ -129,9 +129,9 @@ benefits mobile sub menu***
                 <div class="container">
                     <a @click="exit" href="#"><i class="fas fa-caret-left"></i> Back</a>
                     <router-link :to="{name:'Destinations'}">Complimentary Vacation Destinations</router-link>
-                    <a href="#">Manage Your Complimentary Vacation</a>
-                    <a href="#">Complimentary Vacation Terms &#38; Conditions</a>
-                    <a href="#">Dining Club | Dining Advantage Offers</a>
+                    <a href="https://redeemvacations.com/">Manage Your Complimentary Vacation</a>
+                    <a href="https://redeemvacations.com/terms-and-conditions">Complimentary Vacation Terms &#38; Conditions</a>
+                    <a href="https://www.diningadvantage.com/">Dining Club | Dining Advantage Offers</a>
                 </div>
             </div>
             <a @click="more" href="#">More</a>
@@ -143,18 +143,18 @@ more mobile sub menu***
                     <a @click="exit" href="#"><i class="fas fa-caret-left"></i> Back</a>
                     <a href="#">Member Plans &#38; Pricing</a>
                     <a href="#">Member Profiles</a>
-                    <a href="#">Travel Intel Magazine</a>
-                    <a href="#">Suncoast Magazine</a>
+                    <a href="https://issuu.com/thevipmedia/docs/travel_intel_1">Travel Intel Magazine</a>
+                    <a href="https://issuu.com/thevipmedia/docs/suncoast_magazine_fall.19">Suncoast Magazine</a>
                     <a href="#">Stories</a>
-                    <a href="#">World's Travel Agency</a>
+                    <a href="https://worldstravelagency.com/">World's Travel Agency</a>
                     <a href="#">Offers</a>
                     <a href="#">Giveaways</a>
                     <a href="#">Events</a>
                     <a href="#">Event Calendar</a>
-                    <a href="#">Founders Card Membership</a>
-                    <a href="#">Generous Vacations Printable Certificates</a>
-                    <a href="#">Foodie Intel Media Kit</a>
-                    <a href="#">Foodie Intel Media Kit Magazine</a>
+                    <a href="https://founderscard.com/inquire?code=FCTRACY413">Founders Card Membership</a>
+                    <a href="https://issuu.com/signin?onLogin=%2Fhome%2Fpublished%2Fprintable_certificates">Generous Vacations Printable Certificates</a>
+                    <a href="https://foodieintel.com/images/Foodie-Intel-Media-Kit.pdf">Foodie Intel Media Kit</a>
+                    <a href="https://issuu.com/thevipmedia/docs/foodie_intel_media_kit_40988768746d08">Foodie Intel Media Kit Magazine</a>
                     <a href="#">Videos</a>
                     <a href="#">Photos</a>
                     <a href="#">Audio</a>

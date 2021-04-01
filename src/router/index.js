@@ -5,6 +5,7 @@ import Contact from '../views/Contact.vue'
 import Privacy from '../views/Privacy.vue'
 import Terms from '../views/Terms.vue'
 import Destinations from '../views/Destinations.vue'
+import Pricing_Table from '../views/Pricing_Table.vue'
 
 const routes = [
   {
@@ -41,6 +42,12 @@ const routes = [
     path: '/Destinations',
     name: 'Destinations',
     component: Destinations,
+    props: true
+  },
+  {
+    path: '/Pricing',
+    name: 'Pricing',
+    component: Pricing_Table,
     props: true
   }
 ]

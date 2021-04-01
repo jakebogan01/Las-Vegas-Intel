@@ -4,7 +4,7 @@
             <div class="one links">
                 <h5>Website</h5>
                 <ul>
-                    <li><a href="#">Become A Member Today!</a></li>
+                    <li><router-link :to="{name:'Pricing'}">Become A Member Today!</router-link></li>
                 </ul>
             </div>
             <div class="two links">

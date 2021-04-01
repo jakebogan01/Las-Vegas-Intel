@@ -1,7 +1,7 @@
 <template>
     <Nav :login="login" />
     <section class="destinations">
-        <!-- <img id="background" src="@/assets/images/svg/destination_background.svg" role="presentation" loading="eager"> -->
+        <img id="background" src="@/assets/images/svg/destination_background.svg" role="presentation" loading="eager">
         <main class="accordion">
             <h2>Resort Vacation Award Destinations</h2>
             <vue-collapsible-panel-group accordion>
